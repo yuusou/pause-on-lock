@@ -1,0 +1,5 @@
+pause-on-lock (1.2-0ubuntu1) xenial; urgency=medium
+
+  * Initial packaged release
+
+ -- Thomas Goldbrunner <thomas.goldbrunner@posteo.de>  Fri, 22 Dec 2017 10:14:03 +0100

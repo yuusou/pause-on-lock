@@ -1,0 +1,19 @@
+Source: pause-on-lock
+Section: sound
+Priority: optional
+Maintainer: Thomas Goldbrunner <thomas.goldbrunner@posteo.de>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.7
+Homepage: https://github.com/folixg/pause-on-lock
+
+Package: pause-on-lock
+Architecture: all
+Depends: ${misc:Depends}
+Description: Pause/Resume your music player when locking/unlocking Ubuntu
+ Simple script that pauses your music player, when the screen gets locked
+ and resumes playback once the screen is unlocked again.
+ Currently Unity and GNOME are supported.
+ By default pause-on-lock supports Rhythmbox and Spotify.
+ If you want support for more players, you can install playerctl.
+ If playerctl is installed pause-on-lock supports all players that
+ playerctl can handle.
