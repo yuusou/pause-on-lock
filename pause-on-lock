@@ -20,12 +20,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 #
-if [ "$XDG_CURRENT_DESKTOP" == "Unity" ] ; then
+shopt -s nocasematch
+if [[ "$XDG_CURRENT_DESKTOP" == *"unity"* ]] ; then
   DBUS_LOCK="interface='com.canonical.Unity.Session'"
   LOCK_SIGNAL="Locked"
   UNLOCK_SIGNAL="Unlocked"
 # use wildcards to catch "GNOME" and "ubuntu:GNOME"
-elif [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]] ; then
+elif [[ "$XDG_CURRENT_DESKTOP" == *"gnome"* ]] ; then
   DBUS_LOCK="interface='org.gnome.ScreenSaver',member='ActiveChanged'"
   LOCK_SIGNAL="true"
   UNLOCK_SIGNAL="false"
